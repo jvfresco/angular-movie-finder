@@ -1,0 +1,17 @@
+.Content {
+    overflow: auto;
+    background-color: hsla(0, 0%, 0%, 0.9);
+    overflow-x: hidden;
+    animation: contentAnimation 2s;
+  }
+
+  @keyframes contentAnimation{
+    from{
+      transform: translateY(30px);
+      opacity: 0.5;
+    }
+    to{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

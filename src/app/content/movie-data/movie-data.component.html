@@ -1,0 +1,47 @@
+<div class=movieMovieData>
+    <div *ngIf="movie$ | async as movie" class=movieContentData>
+      <h1>{{movie.title}}</h1>
+      
+      <p class=movieGenres>
+        <span *ngFor="let genre of movie.genres">{{genre.name}},&nbsp;</span>
+      </p>
+      <h2>"{{movie.tagline}}"</h2>
+      <h3>{{movie.overview}}</h3>
+
+      <div class=movieTable>
+        <div class=movieRow>
+          <div class=movieLabel>
+            <span>Director:</span> 
+          </div>
+          <div class=movieValue>
+            <span>{{movie.director}}</span> 
+          </div>
+          <div class=movieLabel>
+            <span>Release:</span>
+          </div> 
+          <div class=movieValue>
+            <span>{{movie.release_date}}</span>
+          </div> 
+          
+        </div>
+        <div class=movieRow>
+          <div class=movieLabel>
+            <span>Rated:</span>
+          </div>
+          <div class=movieValue>
+            <span>{{movie.rated}}</span>
+          </div>
+          <div class=movieLabel>
+            <span>Runtime:</span>
+          </div>
+          <div class=movieValue>
+            <span>{{movie.runtime}} min.</span>
+          </div>
+        </div>
+      </div>
+      <div class=movieRatings>
+        <app-ratings [ratings]="movie.ratings" [averageRating]="movie.average_rating"></app-ratings>
+      </div>
+        <app-recommendations [recommendations]="movie.recommendations"></app-recommendations>
+    </div>
+  </div>

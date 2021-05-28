@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /*activate inheritance for the whole website and set the value in the body */
+}
+
+body {
+  box-sizing: border-box; /*borders and paddings are not added to the total size of the box*/
+  font-family: sans-serif;
+}

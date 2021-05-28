@@ -1,0 +1,3 @@
+<div class=Poster>  
+    <img  *ngIf="movie$ | async as movie" [@poster]="movie.poster_path" class=PosterImage  src='{{ "https://image.tmdb.org/t/p/w500" + movie.poster_path }}'  alt='Movie Poster' />
+</div>

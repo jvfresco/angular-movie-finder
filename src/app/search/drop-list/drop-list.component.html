@@ -1,0 +1,38 @@
+<ul class="listList" *ngIf="movies$ | async as movies; else errorFound" #movieListElement>
+    <div *ngIf="movies.length>0; else notFound">
+        <li class="listMovieMember" *ngFor="let movie of movies" (click)="onClick()">
+            <a [routerLink]="'movie/' + movie.id">
+            <div class="listRow">
+                <div class="listPoster">
+                  <img *ngIf="movie.poster_path" src='{{"https://image.tmdb.org/t/p/w45/" + movie.poster_path}}' alt="Movie Poster" />
+                </div>
+                <div *ngIf="movie.title" class="listTitle">{{movie.title}}</div>
+                <div *ngIf="movie.release_date" class="listRelease">
+                  {{movie.release_date.substring(0,4)}}
+                </div>
+            </div>
+        </a>
+            
+
+        </li>
+
+        <ng-template #notFound>
+            <li class="listMovieMember">
+                <span>Your search did not produce any result</span>
+            </li>
+        </ng-template>
+
+    </div>
+</ul>
+
+<ng-template #errorFound>
+    <ul class="listList" *ngIf="error">
+        <li class="listMovieMember" style="color:red">
+            <span>There has been an error in your request. Try again or refresh</span>
+        </li>
+    </ul>
+</ng-template>
+
+
+
+

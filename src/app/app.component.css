@@ -1,0 +1,49 @@
+.appContainer {
+    margin: auto;
+    overflow: auto;
+    font-family: 'Jost', sans-serif;
+    height:100vh;
+    box-sizing: inherit;
+  }
+  
+  .appBackground {
+    width: 100%;
+    margin:0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: black;
+    background-position: center;
+  }
+  
+  .appShadow {
+    background-image: linear-gradient(rgba(0,0,0,.75) 5%,rgba(0,0,0,.1) 50%,#000 95%);
+  }
+  .appCourtain {
+    background-color: rgba(0,0,0,.1);
+    width:100%;
+  }
+  
+  @media (min-width: 300px){
+    .appContainer {
+      max-width: 100%;
+    }
+  }
+  @media (min-width: 600px){
+    .appContainer {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 800px){
+    .appContainer {
+      max-width: 740px;
+    }
+  }
+  @media (min-width: 1200px){
+    .appContainer {
+       max-width: 1140px;
+    }
+   }
+

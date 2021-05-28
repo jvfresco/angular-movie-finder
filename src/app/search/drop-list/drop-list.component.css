@@ -1,0 +1,124 @@
+.listTitle {
+    display:block;
+    float:left;
+    width:65%;
+  }
+  
+  .listRow {
+    display: flex;
+    cursor: pointer;
+    width:100%;
+    border: 15px solid transparent;
+   
+  }
+  
+  .listRow:hover {
+    background-color:hsla(0, 100%, 50%, 0.425);
+  }
+
+  .listList {
+    list-style: none;
+    padding: 0;
+    color: white;
+    background-color:hsla(0, 0%, 0%, 0.95);
+    position:absolute;
+    transform-origin: 0 0;
+    z-index:1;
+    animation: listAnimation 1s;
+  }
+  
+  a {
+    color:white
+  }
+  
+  .listMovieMember {
+    opacity: 0;
+    animation: listMemberAnimation 2s ease-in 5s forwards;
+  }
+  .listMovieMember:nth-child(1){
+    animation-delay: 100ms;
+  }
+  .listMovieMember:nth-child(2){
+    animation-delay: 600ms;
+  }
+  .listMovieMember:nth-child(3){
+    animation-delay: 1100ms;
+  }
+  .listMovieMember:nth-child(4){
+    animation-delay: 1600ms;
+  }
+  .listMovieMember:nth-child(5){
+    animation-delay: 2100ms;
+  }
+
+
+  
+  @media (min-width: 300px){
+    .listPoster{
+      display: none;
+    }
+    .listRelease {
+      display: none;
+    }
+    .listList {
+        width: 100%;
+      }
+  }
+  @media (min-width: 600px){
+    .listRelease{
+      display:block;
+      float:left;
+    }
+  }
+  @media (min-width: 800px){
+    .listPoster {
+      display: block;
+      width: 12%;
+      float:left;
+      padding-left:15px;
+      padding-top:5px;
+    }
+    .listRow {
+      border: none;
+    }
+    .listRelease, .listTitle {
+      line-height: 79px;
+    }
+    .listList {
+        border-collapse: unset; 
+      }
+   }
+
+   @media (min-width: 1000px){
+    .listList {
+      width: 60%;
+    }
+  }
+
+  @keyframes listAnimation {
+      from {
+        transform: scaleY(0);
+        opacity: 0;
+      }
+      to{
+        transform: scaleY(1);
+        opacity: 1;
+      }
+  }
+
+  @keyframes listMemberAnimation{
+      from{
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+
+   
+  
+ 
+  
+  

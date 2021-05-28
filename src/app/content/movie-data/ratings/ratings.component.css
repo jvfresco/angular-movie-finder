@@ -1,0 +1,48 @@
+  
+.ratingsCenter {
+    display: inline-block;
+  }
+  
+  .ratingsScores, .ratingsAverageScore {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  
+  .ratingsAverageRating {
+    color: white;
+    font-size: 50px;
+  }
+  
+  .ratingsStars {
+    display: inline-block;
+    font-size: 20px;
+    font-family: Times; 
+    line-height: 1;
+    letter-spacing: 3px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .ratingsRating {
+    color: white;
+    text-align: left;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 12px 6px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15px;
+  }
+  .ratingsSource {
+    width: 160px;
+  }
+  
+  .ratingsValue {
+    background-color: red;
+    height: 100%;
+    padding: 0 5px;
+  }
+

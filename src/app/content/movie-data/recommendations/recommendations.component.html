@@ -1,0 +1,30 @@
+<div class="recommendationsRecommendations">
+    <div class="recommendationsRecommendationsHead">
+      {{recommendations.length > 0
+        ? "YOU MAY ALSO LIKE"
+        : "NO RECOMMENDATIONS AVAILABLE FROM THIS MOVIE"}}
+    </div>
+    <div class="recommendationsTable" *ngIf="recommendations">
+      <div class="recommendationsPosterRow">
+
+
+       
+            <div class="recommendationsPoster" *ngFor="let recommendation of recommendations" (mouseenter)="onMouseEnter(recommendation.id)" (mouseleave)="onMouseLeave()">
+                <a style="color:inherit;" [routerLink]="'/movie/'+recommendation.id">
+                <app-title *ngIf="recommendationHovered === recommendation.id" [title]="recommendation.title"></app-title>
+                <img class="recommendationsPosterImage"
+                  src='{{
+                    "https://image.tmdb.org/t/p/w92/" +
+                    recommendation.poster_path
+                  }}'
+                  alt=""
+                  
+                />
+              </a>
+              
+            </div>
+          
+
+      </div>
+    </div>
+  </div>

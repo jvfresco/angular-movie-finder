@@ -1,0 +1,11 @@
+<div class="Content" *ngIf="!error; else errorMessage">
+    <app-movie-data></app-movie-data>
+    <app-movie-poster></app-movie-poster>
+</div>
+
+<ng-template #errorMessage>
+    <div class="Content" style="height:50%; display: flex; align-items:center; text-align: center; color: red;">
+        <h1>There has been an error, please search again or refresh the page</h1>
+    </div>
+</ng-template>
+

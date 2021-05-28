@@ -1,0 +1,9 @@
+.titlePosterTitle {
+    display:block;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    background-color:hsla(0, 0%, 99%, 0.65);
+  }
+
+  

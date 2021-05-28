@@ -1,0 +1,21 @@
+<div class="ratingsCenter">
+    <div class="ratingsScores">
+      <div class="ratingsRating" *ngFor="let rating of ratings">
+        <div class="ratingsSource">{{rating.Source}}</div>
+        <div class="ratingsValue"  [@rating]="{value: 'in', params: {rating: rating.Value * 10 + '%'}}">{{rating.Value}}</div>
+      </div>
+    </div>
+    <div class="ratingsAverageScore">
+      <div class="ratingsAverageRating">
+        <div>{{averageRating.toFixed(1)}}/10</div>
+        <div style="font-size: 0.3em; margin: 5px 0" >AVERAGE RATING</div>
+      </div>
+      <div class="ratingsStars" [style.backgroundImage]=" 'linear-gradient(90deg, red '+averageRating*10+'%, white '+averageRating*10+'%)' ">
+        ★★★★★★★★★★
+      </div>
+    </div>
+  </div>
+
+
+  <!-- [style.width]="rating.Value * 10 + '%'" -->
+

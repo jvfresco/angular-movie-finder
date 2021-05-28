@@ -1,0 +1,110 @@
+
+  
+  .movieMovieData {
+    width: 100%;
+    float:left;
+  }
+  
+  .movieContentData {
+    padding: 0 20px;
+  }
+  @media (max-width:450px) {
+    .movieContentData {
+      padding: 0 10px;
+    }
+  }
+  
+
+  
+  h1 {
+    color: white;
+    margin: 10px 0;
+  }
+  
+  h2 {
+    font-style: italic;
+    text-align: center;
+    color: red;
+    margin: 10px 0;
+  }
+  h3 {
+    margin: 20px 10px;
+    color: white;
+    font-size: 1em;
+    line-height: 150%;
+    font-weight: inherit;
+  }
+  
+  .movieRatings {
+    border: 1px solid white;
+    overflow: auto;
+    text-align: center;
+    border-image: linear-gradient(to bottom, white,  transparent) 0 100%;
+  }
+  
+ 
+  
+  @media(min-width:600px){
+    h3{
+      margin: 15px 20px;
+    }
+  }
+  
+  .movieGenres {
+    font-style: italic;
+    color:white;
+    margin: 5px 0;
+  }
+  
+  .movieTable {
+    width: 100%;
+    overflow:auto;
+    float: left;
+    display:table;
+    margin: 10px 0px 10px 4%;
+  }
+  
+  @media(max-width: 400px){
+    h1{
+      font-size: 1.5em;
+    }
+    h2{
+      font-size: 1.25em;
+    }
+    h3{
+      font-size: 1em;
+    }
+    .movieTable {
+      font-size: 0.7em;
+    }
+  }
+  
+  
+  .movieCell {
+    width:25%;
+    float:left;
+  }
+  
+  .movieRow {
+    display: table-row;
+  }
+  
+  .movieValue, .movieLabel {
+    float:left;
+  }
+  
+  .movieLabel{
+    color: red;
+    width:20%;
+  }
+  
+  .movieValue{
+    color: white;
+    width:30%;
+  }
+  
+  @media (min-width: 800px){
+    .movieMovieData{
+      width:60%;
+    }
+  }
