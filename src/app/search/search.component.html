@@ -1,4 +1,5 @@
 <div class="Navbar">
-    <input name="searchInput" class="inputSearch" type='text' placeholder='Search your desired movie here...' (ngModelChange)="searchInputUpdate.next($event)" [(ngModel)]="searchInput"/>
+    <label for="searchInput" hidden aria-hidden="false">Search Movie</label>
+    <input id="searchInput" name="searchInput" class="inputSearch" type='text' placeholder='Search your desired movie here...' (ngModelChange)="searchInputUpdate.next($event)" [(ngModel)]="searchInput"/>
     <app-drop-list></app-drop-list>
 </div>
