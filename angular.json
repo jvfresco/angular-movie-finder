@@ -116,6 +116,10 @@
               "devServerTarget": "movie-finder:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
