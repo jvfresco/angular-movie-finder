@@ -1,36 +1,38 @@
-  
 .Footer {
-    clear: both;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9) 50%, transparent);
-    text-align: center;
-    overflow-y: hidden;
-    color: #373737;
-  }
-  
-  .footerAnimation {
-    opacity: 0;
-    animation: footerAnimation 3s ease 3s forwards;
-    
-  }
-  
-  .footerLogo {
-    float: left;
-    margin:10px 10px;
-    opacity: 0.3;
-  }
-  
-  .footerLogos {
-    overflow:auto;
-    display: inline-block;
-  }
+  clear: both;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9) 50%, transparent);
+  text-align: center;
+  overflow-y: hidden;
+  color: #373737;
+}
 
-  @keyframes footerAnimation {
-    0%{
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100%{
-      opacity: 1;
-      transform: translateY(0);
-    }
+.footerAnimation {
+  opacity: 0;
+  animation: footerAnimation 3s ease 3s forwards;
+}
+
+.footerLogo {
+  float: left;
+  margin: 10px 10px;
+  opacity: 0.3;
+}
+
+.footerLogos {
+  overflow: auto;
+  display: inline-block;
+}
+
+.ratingsValue {
+  background-color: white;
+}
+
+@keyframes footerAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,27 +1,24 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { MoviesService } from 'src/app/shared/movies.service';
 
 @Component({
   selector: 'app-recommendations',
   templateUrl: './recommendations.component.html',
-  styleUrls: ['./recommendations.component.css']
+  styleUrls: ['./recommendations.component.css'],
 })
 export class RecommendationsComponent implements OnInit {
-  recommendationHovered: number
-  @Input() recommendations = []
+  recommendationHovered: number;
+  @Input() recommendations = [];
 
-  constructor(private moviesService: MoviesService) { }
+  constructor(private moviesService: MoviesService) {}
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {}
+
+  onMouseEnter(id: number) {
+    this.recommendationHovered = id;
   }
 
-  onMouseEnter(id: number){
-    this.recommendationHovered = id
-  }
-
-  onMouseLeave(){
-    this.recommendationHovered = null
+  onMouseLeave() {
+    this.recommendationHovered = null;
   }
 }
